@@ -1,11 +1,23 @@
 #first_task
+# print(word[(len(word)-1)//2:(len(word)+2)//2])
+
 word = 'testing'
 if len(word) % 2 == 0:
     print(word[int(len(word) / 2 - 1): int(len(word) / 2) + 1])
 elif len(word) % 2 != 0:
     print(word[int(len(word) / 2)])
+    
+
 
 #second_task
+'''
+a = 0
+while number := int(input("введите число: ")):
+    a += number
+print(a)
+'''
+#print(sum([int(x) for x in iter(input, '0')]))
+
 num = 1
 sum = 0
 
@@ -40,6 +52,18 @@ for i in range(len(countries_temperature)):
     print(f"{countries_temperature[i][0]} - {average} C")
 
 #fifth_task
+'''
+car_ids = ['А222ВС96', 'АБ22ВВ193']
+
+pattern = '([АВЕКМНОРСТУХ]\d{3}[АВЕКМНОРСТУХ]{2})(\d{2,3})'
+for car_id in car_ids:
+    result = re.search(pattern, car_id)
+    if re.match(pattern, car_id):
+        print(f'Номер {result.group(1)} валиден. Регион: {result.group(2)}')
+    else:
+        print(f'Номер {car_id} не валиден')
+'''
+
 car_ids = ['А222ВС96', 'АБ22ВВ193']
 for i in range(len(car_ids)):
     if len(car_ids[i]) == 8:
